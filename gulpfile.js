@@ -29,6 +29,7 @@ function scriptsComp() {
 }
 
 exports.default = gulp.parallel(styles, images, scriptsComp, htmlComp);
+
 exports.watch = function() {
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles));
     gulp.watch('./src/scripts/*.js', gulp.parallel(scriptsComp));
