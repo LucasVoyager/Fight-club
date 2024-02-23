@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (let i =0; i< buttons.length; i++) {
         buttons[i].addEventListener('click', function(butt) {
-            const targetTab = butt.target.dataset.tabButton;
-            const tab = document.querySelector(`[data-tab-id]=${targetTab}`);
-            hidetabs();
+            const targetTab = butt.target.dataset.tabButton.toLowerCase();
+            const tab = document.querySelector(`[data-tab-id="${targetTab}"]`);
+            hideTabs();
             tab.classList.add('characters__div--is-active');
             changeButton();
             butt.target.classList.add('characters__tabs__button--is-active');

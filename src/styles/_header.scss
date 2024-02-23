@@ -6,15 +6,24 @@
     left: 0;
     background-color: variaveis.$corHeader;
 
+
     &__container {
         padding: 8px 36px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 2px;
+        }
     }
 
     &__title {
         margin: 5px;
+
+        @media (max-width: 768px) {
+            margin: 0;
+        }
     }
 
     &__nav {
@@ -22,7 +31,15 @@
         list-style: none;
 
         &__bar {
-            margin-right: 8px;
+            margin-right: 16px;
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+
+            &__bar {
+                margin-left: 0;
+            }
         }
     }
 }
